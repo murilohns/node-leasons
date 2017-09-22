@@ -1,18 +1,6 @@
-var express = require('express');
-var app = express();
-app.set('view engine','ejs');
+var app = require('./config/server');
 
-app.get('/',function(req, res){
-  res.render('site/home');
-});
-
-
-app.get('/contato',function(req, res){
-  res.render('site/contato');
-});
-
-
-app.listen(8001, function(){
-  console.log("localhost:8001");
+app.listen(8002, function(){
+  console.log("localhost:8002");
 });
 
