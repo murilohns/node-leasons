@@ -1,7 +1,9 @@
+var clienteModel = require('../models/clienteModel')();
 
 module.exports = function(app){
   app.get('/',function(req, res){
-    res.render('site/home');
+    var listaClientes = clienteModel.all();
+    res.render('site/home', {clientes:listaClientes});
   });
 
 
