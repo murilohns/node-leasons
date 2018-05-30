@@ -4,19 +4,15 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.send("<html><body>Portal de noticias</body></html>");
+    res.render("home/index");
 });
 
-app.get('/technology', (req, res) => {
-    res.render("category/technology");
+app.get('/news_form', (req, res) => {
+    res.render("admin/news_form");
 });
 
-app.get('/fashion', (req, res) => {
-    res.send("<html><body>Notícias de Moda</body></html>");
-});
-
-app.get('/beauty', (req, res) => {
-    res.send("<html><body>Notícias de beleza</body></html>");
+app.get('/news', (req, res) => {
+    res.render("noticias/news");
 });
 
 app.listen(3000, () => {
