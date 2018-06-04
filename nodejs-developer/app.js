@@ -1,7 +1,4 @@
-const express = require('express');
-const app = express();
-
-app.set('view engine', 'ejs');
+app = require('./config/server');
 
 app.get('/', (req, res) => {
     res.render("home/index");
@@ -16,5 +13,5 @@ app.get('/news', (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log("Success")
+    console.log("Listening on port 3000")
 });
